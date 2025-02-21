@@ -7,10 +7,9 @@ spring:
     host: localhost
     port: 5672
     
-    
 logging:
   level:
     it:
       marco:
-        messagebrokerpublisher: DEBUG
+        messagebrokerreceiver: DEBUG
 

@@ -1,14 +1,14 @@
 spring:
   application:
-    name: message-broker-publisher
+    name: message-broker-receiver-other
   rabbitmq:
     username: myuser
     password: secret
     host: localhost
     port: 5672
-
+    
 logging:
   level:
     it:
       marco:
-        messagebrokerpublisher: DEBUG
+        messagebrokerreceiverother: DEBUG

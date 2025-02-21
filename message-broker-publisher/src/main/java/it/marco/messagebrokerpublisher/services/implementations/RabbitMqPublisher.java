@@ -15,8 +15,8 @@ public class RabbitMqPublisher implements IMessagePublisher {
     }
 
     @Override
-    public void sendMessage(String message) {
-        this.rabbitTemplate.convertAndSend(QueueConfig.topicExchangeName,"routing-key", message);
+    public void sendMessage(String routingKey, String message) {
+        this.rabbitTemplate.convertAndSend(QueueConfig.TOPIC, routingKey, message);
         
     }
 }

@@ -22,7 +22,16 @@ public class MyScheduledJobs implements IScheduledJob {
     @Scheduled(cron = "0 * * * * *") // every minute
     public void everyMinute() {
         LOGGER.debug("1 Minute is gone");
-        this.messagePublisher.sendMessage("Hello 1 minute");
+        this.messagePublisher.sendMessage("foo.bar.some.test.on.queue.one", "Hello 1 minute for queue 1");
+        this.messagePublisher.sendMessage("foo.baz.onqueuetwo", "Hello 1 minute for queue 2");
+        this.messagePublisher.sendMessage("foo.not.routed", "Hello 1 minute");
+    }
+
+    @Override
+    @Scheduled(cron = "0 */2 * * * *") // every minute
+    public void everyTwoMinutes() {
+        LOGGER.debug("2 Minutes are gone");
+        this.messagePublisher.sendMessage("foo.baz.onqueuetwo", "Hello 2 minute for queue 2");
     }
 
 }
