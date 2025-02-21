@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: message-broker-publisher
+  rabbitmq:
+    username: myuser
+    password: secret

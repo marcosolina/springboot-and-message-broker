@@ -1,10 +1,10 @@
-package it.marco.message_broker_publisher;
+package it.marco.messagebrokerreceiver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MessageBrokerPublisherApplicationTests {
+class MessageBrokerReceiverApplicationTests {
 
 	@Test
 	void contextLoads() {

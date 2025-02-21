@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: message-broker-receiver
+  rabbitmq:
+    username: myuser
+    password: secret
+    host: localhost
+    port: 5672
+    
+    
+logging:
+  level:
+    it:
+      marco:
+        messagebrokerpublisher: DEBUG
+
