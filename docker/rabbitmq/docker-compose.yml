@@ -1,0 +1,16 @@
+services:
+  rabbitmq-image:
+    image: rabbitmq:4.0.6-management
+    container_name: rabbitmq-container
+    environment:
+      - 'RABBITMQ_DEFAULT_PASS=secret'
+      - 'RABBITMQ_DEFAULT_USER=myuser'
+    ports:
+      - 5672:5672
+      - 15672:15672 
+    networks:
+      - springboot-and-rabbitmq-net
+
+networks:
+  springboot-and-rabbitmq-net:
+    name: message-broker-net
